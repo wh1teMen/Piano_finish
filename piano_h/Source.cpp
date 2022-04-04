@@ -33,13 +33,9 @@ int main() {
 		switch (ch)
 		{
 			//кнопка выхода
-		/*case ESC:
-			//exit(false);
-			clear;
-			GoToXY(50, 12);
-			cout << "Спасибо за внимание";
+		case ESC:
+			exit(false);
 			break;
-			*/
 		case Z:
 			//подсветка при нажатии клавиши, и вывод названия ноты
 			for (int i = 0; i < 1; i++) {
@@ -144,12 +140,6 @@ int main() {
 			//воспроизведение звука по заданной частоте и времени
 			Beep(493.88, 300);
 			clear;
-			break;
-		case ESC:
-			//exit(false);
-			clear;
-			GoToXY(50, 12);
-			cout << "Спасибо за внимание";
 			break;
 		default:cout << "ошибка ввода " << endl;
 
