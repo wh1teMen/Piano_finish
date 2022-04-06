@@ -7,12 +7,14 @@
 using namespace std;
 int main() {
 	setlocale(LC_ALL, "ru");
+	system("mode con lines=10 cols=40");
 	ConsoleCursorVisible(false);//скрываем курсор
-	system("title Итоговая работа: Фортепиано!!!");// меняем название консольного окна
+	system("title Фортепиано!!!");// меняем название консольного окна
 	int activ_piano = 0; //активность подсветки
 	int x = 0, y = 0; //координаты по умолчанию
 	char ch;
 	hello();
+	system("mode con lines=12 cols=31");
 	//бесконечный цикл
 	while (true) {
 		//отрисовываем(выводим) клавиши фортепиано
@@ -27,13 +29,15 @@ int main() {
 		}
 		
 		//выводим название кнопок
-		cout << "[Z] " << "[X] " << "[C] " << "[V] " << "[B] " << "[N] " << "[M] " << endl;
+		cout << "[Z] " << "[X] " << "[C] " << "[V] " << "[B] " << "[N] " << "[M] " << endl; 
+		cout<<"\n\nДля выхода нажмите ESC" << endl;
 		//переменная равная функции,ожидающая нажатие клавиши
 		ch = _getch();
 		switch (ch)
 		{
 			//кнопка выхода
 		case ESC:
+			bye();
 			exit(false);
 			break;
 		case Z:
@@ -144,6 +148,8 @@ int main() {
 		default:cout << "ошибка ввода " << endl;
 
 		}
+		
 	}
+	
 	return 0;
 }

@@ -14,11 +14,18 @@ void ConsoleCursorVisible(bool show){
 	SetConsoleCursorInfo(console, &structCursorInfo);
 }
 void hello() {
-	string hello[5] = { "Итоговая Работа!","Создатель: Белов Александр Сергеевич","Группа: БВ-112","Название: Фортепиано.","Для продолжения нажмите любую клавишу....." };
-	for (int i = 0; i < 5; i++) {
+	string hello[3] = { "\t  Итоговая Работа!","\n\tНазвание: Фортепиано.","\n\n\n\nДля продолжения нажмите любую клавишу....." };
+	for (int i = 0; i < 3; i++) {
 		cout << hello[i] << endl;
 
 	}
 	system("pause>nul");
 	clear;
+}
+void bye() {
+	clear;
+	string bye[3] = { "Создатель:\nБелов Александр Сергеевич","Группа: БВ-112","Спасибо за внимание!!!" };
+	for (int i = 0; i < 3; i++)
+		cout << bye[i] << endl;
+	system("pause>nul");
 }
