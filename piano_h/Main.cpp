@@ -8,16 +8,16 @@ using namespace std;
 int main() {
 	setlocale(LC_ALL, "ru");
 	system("mode con lines=10 cols=40");
-	ConsoleCursorVisible(false);//скрываем курсор
-	system("title Фортепиано!!!");// меняем название консольного окна
-	int activ_piano = 0; //активность подсветки
-	int x = 0, y = 0; //координаты по умолчанию
+	ConsoleCursorVisible(false);//hiding the cursor
+	system("title Фортепиано!!!");// changing the name of the console window
+	int activ_piano = 0; //backlight activity
+	int x = 0, y = 0; //default coordinates
 	char ch;
 	hello();
-	system("mode con lines=12 cols=31");
-	//бесконечный цикл
+	system("mode con lines=12 cols=31"); //changing the size of the console window
+	
 	while (true) {
-		//отрисовываем(выводим) клавиши фортепиано
+		//draw piano keys
 		
 		for (int i = 0; i < 7; i++) {
 			if (i == activ_piano) SetConsoleTextAttribute(console, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY);
@@ -28,20 +28,19 @@ int main() {
 			cout << endl;
 		}
 		
-		//выводим название кнопок
+		//output the name of the buttons
 		cout << "[Z] " << "[X] " << "[C] " << "[V] " << "[B] " << "[N] " << "[M] " << endl; 
 		cout<<"\n\nДля выхода нажмите ESC" << endl;
-		//переменная равная функции,ожидающая нажатие клавиши
 		ch = _getch();
 		switch (ch)
 		{
-			//кнопка выхода
+			//exit button
 		case ESC:
 			bye();
 			exit(false);
 			break;
 		case Z:
-			//подсветка при нажатии клавиши, и вывод названия ноты
+			//highlighting when the key is pressed, and the output of the name of the note
 			for (int i = 0; i < 1; i++) {
 				for (int j = 0; j < 7; j++) {
 					GoToXY(x, j);
@@ -51,12 +50,12 @@ int main() {
 				}
 				cout << "\nНота--->ДО" << endl;
 			}
-			//воспроизведение звука по заданной частоте и времени
+			//audio playback at a given frequency and time
 			Beep(293.66, 300);
 			clear;
 			break;
 		case X:
-			//подсветка при нажатии клавиши, и вывод названия ноты
+			//highlighting when the key is pressed, and the output of the name of the note
 			for (int i = 0; i < 1; i++) {
 				for (int j = 0; j < 7; j++) {
 					GoToXY(x + 4, j);
@@ -66,12 +65,12 @@ int main() {
 				}
 				cout << "\nНота--->РЕ" << endl;
 			}
-			//воспроизведение звука по заданной частоте и времени
+			//audio playback at a given frequency and time
 			Beep(329.63, 300);
 			clear;
 			break;
 		case C:
-			//подсветка при нажатии клавиши, и вывод названия ноты
+			//highlighting when the key is pressed, and the output of the name of the note
 			for (int i = 0; i < 1; i++) {
 				for (int j = 0; j < 7; j++) {
 					GoToXY(x + 8, j);
@@ -81,12 +80,12 @@ int main() {
 				}
 				cout << "\nНота--->МИ" << endl;
 			}
-			//воспроизведение звука по заданной частоте и времени
+			//audio playback at a given frequency and time
 			Beep(329.63, 300);
 			clear;
 			break;
 		case V:
-			//подсветка при нажатии клавиши, и вывод названия ноты
+			//highlighting when the key is pressed, and the output of the name of the note
 			for (int i = 0; i < 1; i++) {
 				for (int j = 0; j < 7; j++) {
 					GoToXY(x + 12, j);
@@ -96,12 +95,12 @@ int main() {
 				}
 				cout << "\nНота--->ФА" << endl;
 			}
-			//воспроизведение звука по заданной частоте и времени
+			//audio playback at a given frequency and time
 			Beep(349.23, 300);
 			clear;
 			break;
 		case B:
-			//подсветка при нажатии клавиши, и вывод названия ноты
+			//highlighting when the key is pressed, and the output of the name of the note
 			for (int i = 0; i < 1; i++) {
 				for (int j = 0; j < 7; j++) {
 					GoToXY(x + 16, j);
@@ -111,12 +110,12 @@ int main() {
 				}
 				cout << "\nНота--->СОЛЬ" << endl;
 			}
-			//воспроизведение звука по заданной частоте и времени
+			//audio playback at a given frequency and time
 			Beep(392.00, 300);
 			clear;
 			break;
 		case N:
-			//подсветка при нажатии клавиши, и вывод названия ноты
+			//highlighting when the key is pressed, and the output of the name of the note
 			for (int i = 0; i < 1; i++) {
 				for (int j = 0; j < 7; j++) {
 					GoToXY(x + 20, j);
@@ -126,12 +125,12 @@ int main() {
 				}
 				cout << "\nНота--->ЛЯ" << endl;
 			}
-			//воспроизведение звука по заданной частоте и времени
+			//audio playback at a given frequency and time
 			Beep(440.00, 300);
 			clear;
 			break;
 		case M:
-			//подсветка при нажатии клавиши, и вывод названия ноты
+			//highlighting when the key is pressed, and the output of the name of the note
 			for (int i = 0; i < 1; i++) {
 				for (int j = 0; j < 7; j++) {
 					GoToXY(x + 24, j);
@@ -141,7 +140,7 @@ int main() {
 				}
 				cout << "\nНота--->СИ" << endl;
 			}
-			//воспроизведение звука по заданной частоте и времени
+			//audio playback at a given frequency and time
 			Beep(493.88, 300);
 			clear;
 			break;

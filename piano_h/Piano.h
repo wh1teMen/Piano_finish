@@ -2,23 +2,23 @@
 #include<iostream>
 #include<windows.h>
 #include<conio.h>
-#define clear system("cls")// очищение экрана
-#define ESC 27 //кнопка выхода
-#define Z 122//кнопка ноты ДО
-#define X 120//кнопка ноты РЕ
-#define C 99//кнопка ноты МИ
-#define V 118//кнопка ноты ФА
-#define B 98//кнопка ноты СОЛЬ
-#define N 110//кнопка ноты ЛЯ
-#define M 109//кнопка ноты СИ
+#define clear system("cls")// clearing the screen
+#define ESC 27 //exit button
+#define Z 122//button notes С
+#define X 120//button notes D
+#define C 99//button notes E
+#define V 118//button notes F
+#define B 98//button notes G
+#define N 110//button notes A
+#define M 109//button notes B
 using namespace std;
-//получаем дискриптор консоли
+//getting the console descriptor
 const HANDLE console = GetStdHandle((DWORD)-11); 
-//курсор в точку х,y
+//cursor to point x,y
 void GoToXY(short x, short y);  
-//функция изменения видимости курсора
+//cursor visibility change function
 void ConsoleCursorVisible(bool show);
-//приветственное сообщение
+//welcome message
 void hello(); 
-//Итоговое сообщение
+//Final message
 void bye();

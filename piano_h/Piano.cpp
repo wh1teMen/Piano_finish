@@ -10,7 +10,7 @@ void GoToXY(short x, short y)
 void ConsoleCursorVisible(bool show){
 	CONSOLE_CURSOR_INFO structCursorInfo;
 	GetConsoleCursorInfo(console, &structCursorInfo);
-	structCursorInfo.bVisible = show; // изменяем видимость курсора
+	structCursorInfo.bVisible = show; 
 	SetConsoleCursorInfo(console, &structCursorInfo);
 }
 void hello() {
