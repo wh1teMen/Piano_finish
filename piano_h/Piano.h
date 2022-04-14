@@ -22,3 +22,4 @@ void ConsoleCursorVisible(bool show);
 void hello(); 
 //Final message
 void bye();
+//show notes

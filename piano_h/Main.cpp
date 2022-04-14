@@ -144,8 +144,6 @@ int main() {
 			Beep(493.88, 300);
 			clear;
 			break;
-		default:cout << "ошибка ввода " << endl;
-
 		}
 		
 	}
