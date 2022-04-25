@@ -141,9 +141,12 @@
   <ItemGroup>
     <ClCompile Include="Piano.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="PianoKey.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Piano.h" />
+    <ClInclude Include="PianoDefine.h" />
+    <ClInclude Include="PianoKey.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

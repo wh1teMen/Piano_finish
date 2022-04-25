@@ -2,16 +2,12 @@
 #include<iostream>
 #include<windows.h>
 #include<conio.h>
-#define clear system("cls")// clearing the screen
-#define ESC 27 //exit button
-#define Z 122//button notes Ñ
-#define X 120//button notes D
-#define C 99//button notes E
-#define V 118//button notes F
-#define B 98//button notes G
-#define N 110//button notes A
-#define M 109//button notes B
+#include"PianoDefine.h"
+#include"PianoKey.h"
 using namespace std;
+ static int activ_piano = 0;
+ static int x = 0, y = 0;
+ static char ch;
 //getting the console descriptor
 const HANDLE console = GetStdHandle((DWORD)-11); 
 //cursor to point x,y
@@ -22,4 +18,9 @@ void ConsoleCursorVisible(bool show);
 void hello(); 
 //Final message
 void bye();
-//show notes
+//draw piano keys
+void drawingApiano();
+//output the name of the buttons
+void panel();
+//infinite loop
+void while_();
