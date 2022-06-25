@@ -9,7 +9,9 @@ using namespace std;
  static int x = 0, y = 0;
  static char ch;
 //getting the console descriptor
-const HANDLE console = GetStdHandle((DWORD)-11); 
+const HANDLE console = GetStdHandle((DWORD)-11); //потенциальная ошибка
+				//ещё одна вставка этого заголовка в программу и работать будет 
+				//на уровне китайских часов
 //cursor to point x,y
 void GoToXY(short x, short y);  
 //cursor visibility change function

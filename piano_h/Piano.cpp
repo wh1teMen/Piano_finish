@@ -4,6 +4,8 @@
 #include "Piano.h"
 #include"PianoDefine.h"
 #include"PianoKey.h"
+
+
 using namespace std;
 void GoToXY(short x, short y)
 {
